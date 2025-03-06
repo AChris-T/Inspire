@@ -17,7 +17,7 @@ const YouTubeVideo: React.FC<YouTubeVideoProps> = ({
     <div
       className={`relative w-full overflow-hidden rounded-lg shadow-xl ${className}`}
     >
-      <div className="aspect-w-16 aspect-h-9">
+      <div className="aspect-w-26 aspect-h-20">
         <iframe
           src={`https://www.youtube.com/embed/${videoId}${
             autoplay ? '?autoplay=1' : ''
@@ -25,7 +25,7 @@ const YouTubeVideo: React.FC<YouTubeVideoProps> = ({
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-full luxury-shadow"
+          className="w-full h-[370px] transition-all duration-300"
         ></iframe>
       </div>
     </div>
