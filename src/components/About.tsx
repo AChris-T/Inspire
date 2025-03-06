@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Briefcase, GraduationCap } from 'lucide-react';
+import CEO from '../assets/CEO.png';
 
 const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,7 +52,7 @@ const About = () => {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold-500"></div>
               <div className="relative overflow-hidden rounded-md">
                 <img
-                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                  src={CEO}
                   alt="Adenola Adegbesan"
                   className="w-full h-auto object-cover aspect-[3/4] rounded-md transform transition-transform duration-700 hover:scale-105"
                 />

@@ -19,7 +19,7 @@ const Header = () => {
     { name: 'Consulting', href: '/consulting' },
     { name: 'InspireEdge AI', href: '/inspireedge' },
     { name: 'Book', href: '/book' },
-    { name: 'Blog', href: '/blog' }
+    { name: 'Blog', href: '/blog' },
   ];
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     // Close mobile menu when route changes
     setMobileMenuOpen(false);
 
@@ -42,7 +42,13 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <header className={`fixed w-full py-4 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90 backdrop-blur-sm'}`}>
+    <header
+      className={`fixed w-full py-4 top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white shadow-md'
+          : 'bg-white bg-opacity-90 backdrop-blur-sm'
+      }`}
+    >
       <div className="content-container">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -67,8 +73,8 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="premium-button-outline text-sm"
               aria-label="Contact Adenola Adegbesan"
             >
@@ -108,8 +114,8 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="mt-4 py-3 px-8 bg-gold-500 hover:bg-gold-600 text-navy-950 rounded transition-colors font-medium text-xl"
               onClick={() => setMobileMenuOpen(false)}
             >
