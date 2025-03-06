@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Book, Globe, Award, MessageSquare } from 'lucide-react';
+import suite from "../assets/Suit.png"
 
 const BookSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,7 @@ const BookSection = () => {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold-500"></div>
               <div className="relative overflow-hidden rounded-md shadow-xl">
                 <img 
-                  src="/lovable-uploads/390c05bc-14e8-4f0a-8ad3-a7acc431c433.png" 
+                  src={suite} 
                   alt="Adenola Adegbesan's book - The Legal Lifeline of Global Businesses" 
                   className="w-full h-auto object-cover rounded-md transform transition-transform duration-700 hover:scale-105"
                 />

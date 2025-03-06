@@ -23,7 +23,6 @@ export default function Home() {
         pageLoaded ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <Header />
       <main>
         <Hero />
         <About />
