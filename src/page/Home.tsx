@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Services from '../components/Service';
 
 export default function Home() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -24,6 +25,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Services />
       </main>
     </div>
   );
