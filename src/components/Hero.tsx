@@ -60,7 +60,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen  flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen mt-24 flex items-center justify-center overflow-hidden">
       {/* Background with parallax effect */}
       <div
         ref={backgroundRef}
