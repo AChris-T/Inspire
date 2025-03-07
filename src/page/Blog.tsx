@@ -106,7 +106,7 @@ const Blog = () => {
             </div>
 
             {/* Blog post list */}
-      {/*       <BlogList posts={filteredPosts} />
+            <BlogList posts={filteredPosts} />
             {filteredPosts.length === 0 && (
               <div className="text-center py-16">
                 <h3 className="text-2xl font-medium mb-2">No articles found</h3>
@@ -115,8 +115,7 @@ const Blog = () => {
                 </p>
               </div>
             )}
-            */}
-              </div> 
+          </div>
         </section>
       </main>
     </div>
