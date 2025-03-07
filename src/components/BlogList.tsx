@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
-import { Blog } from '../../src/types';
+import { Blog } from '../types';
 
 interface BlogListProps {
   posts: Blog[];

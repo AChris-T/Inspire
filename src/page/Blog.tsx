@@ -45,7 +45,7 @@ const Blog = () => {
 
         <section className="content-container py-12">
           <div className="max-w-5xl mx-auto px-4">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 ">
               <div className="w-20 h-20 bg-navy-50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <BookOpen className="w-10 h-10 text-navy-900" />
               </div>

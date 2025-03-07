@@ -4,7 +4,7 @@ const BlogHero = () => {
   return (
     <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white py-20">
       <div className="content-container">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center mt-16">
           <h1 className="hero-text mb-6">
             AI Strategy <span className="gold-highlight">Insights</span>
           </h1>
