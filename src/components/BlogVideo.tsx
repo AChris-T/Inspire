@@ -29,7 +29,7 @@ const BlogVideo = () => {
               </h3>
             </div>
             <YouTubeVideo
-              videoId="KUKxuIPgsZY"
+              videoId="ygjqjtpj4GI"
               title="AI Strategy for Business Leaders"
               className="shadow-lg"
             />
