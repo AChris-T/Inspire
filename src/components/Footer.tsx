@@ -182,7 +182,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <span className="text-gold-500 mr-2">•</span>
                 <span className="text-platinum-400">
-                  Phone: +1 (555) 123-4567
+                  Phone: +234 811 269 8170
                 </span>
               </li>
               <li className="flex items-start">
