@@ -185,7 +185,7 @@ const Contact = () => {
                     href="tel:+4407432529090"
                     className="text-navy-900 hover:text-gold-500 transition-colors"
                   >
-                    +44 07432 529090
+                    +234 811 269 8170{' '}
                   </a>
                 </div>
                 <div className="flex items-center">

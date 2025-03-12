@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import CEO from '../assets/Suit.png';
+import Azon from '../assets/Abook.jpg';
+import acedemia from '../assets/acedemia.jpg';
 
 import {
   Book as BookIcon,
@@ -296,13 +298,14 @@ const Book = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <a
-                href="#"
+                href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AAdenola%2BAdegbesan&s=relevancerank&text=Adenola+Adegbesan&ref=dp_byline_sr_book_1"
+                target="_blank"
                 className="premium-card p-8 hover:shadow-lg transition-all duration-300 flex items-center"
               >
                 <img
-                  src="https://placehold.co/120x60"
+                  src={Azon}
                   alt="Amazon"
-                  className="w-[120px] mr-6"
+                  className="w-[120px] mr-6 object-cover"
                 />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Amazon</h3>
@@ -313,31 +316,29 @@ const Book = () => {
               </a>
 
               <a
-                href="#"
+                target="_blank"
+                href="https://independent.academia.edu/AdegbesanAdenola"
                 className="premium-card p-8 hover:shadow-lg transition-all duration-300 flex items-center"
               >
-                <img
-                  src="https://placehold.co/120x60"
-                  alt="Barnes & Noble"
-                  className="w-[120px] mr-6"
-                />
+                <img src={acedemia} alt="Acedemia" className="w-[120px] mr-6" />
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Barnes & Noble</h3>
+                  <h3 className="text-xl font-bold mb-2">Acedemia</h3>
                   <p className="text-gray-600">Hardcover and e-book</p>
                 </div>
               </a>
 
               <a
-                href="#"
+                href="https://medium.com/@inspirecraftglobal8"
+                target="_blank"
                 className="premium-card p-8 hover:shadow-lg transition-all duration-300 flex items-center"
               >
                 <img
-                  src="https://placehold.co/120x60"
+                  src="https://medium.com/@inspirecraftglobal8"
                   alt="Apple Books"
                   className="w-[120px] mr-6"
                 />
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Apple Books</h3>
+                  <h3 className="text-xl font-bold mb-2">Medium Books</h3>
                   <p className="text-gray-600">E-book and audiobook</p>
                 </div>
               </a>
