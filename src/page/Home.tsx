@@ -11,6 +11,10 @@ export default function Home() {
   const [pageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     // Set a timeout to simulate content loading
     const timer = setTimeout(() => {
       setPageLoaded(true);

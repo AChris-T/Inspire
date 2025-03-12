@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { BookOpen, Search, Filter } from 'lucide-react';
 import { blogPosts } from '../data/BlogPost';
 import BlogHero from '../components/BlogHero';
 import BlogList from '../components/BlogList';
+import MediumPosts from '../components/BlogSample';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,7 +24,12 @@ const Blog = () => {
     'all',
     ...new Set(blogPosts.map((post) => post.category)),
   ];
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <div className="min-h-screen">
       {/* <Helmet>
@@ -42,7 +48,8 @@ const Blog = () => {
 
       <main>
         <BlogHero />
-
+        {/*         <MediumPosts />
+         */}{' '}
         <section className="content-container py-12">
           <div className="max-w-5xl mx-auto px-4">
             <div className="text-center mb-8 ">

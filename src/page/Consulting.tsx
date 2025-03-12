@@ -15,6 +15,10 @@ const Consulting = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     const timer = setTimeout(() => {
       setPageLoaded(true);
     }, 100);

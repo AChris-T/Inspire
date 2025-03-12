@@ -9,6 +9,14 @@ const InspireEdge = () => {
   const featureRowsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     const timer = setTimeout(() => {
       setPageLoaded(true);
     }, 100);
@@ -48,7 +56,7 @@ const InspireEdge = () => {
       <main>
         <section className="relative pt-32 pb-20 bg-navy-950">
           <div className="absolute inset-0 bg-gradient-to-b from-navy-950 to-navy-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e')] bg-cover bg-center opacity-10"></div>
+            <div className="absolute  inset-0 bg-[url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e')] bg-cover bg-center opacity-10"></div>
           </div>
           <div className="content-container relative z-10">
             <div
@@ -69,11 +77,11 @@ const InspireEdge = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 w-full">
+          {/*   <div className="absolute bottom-0 left-0 w-full h-32 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className="text-white"
+              className="text-red-400"
             >
               <path
                 fill="currentColor"
@@ -81,7 +89,7 @@ const InspireEdge = () => {
                 d="M0,128L60,138.7C120,149,240,171,360,176C480,181,600,171,720,144C840,117,960,75,1080,74.7C1200,75,1320,117,1380,138.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
               ></path>
             </svg>
-          </div>
+          </div> */}
         </section>
 
         <section className="py-16 bg-white">
