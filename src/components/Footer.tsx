@@ -188,7 +188,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <span className="text-gold-500 mr-2">•</span>
                 <span className="text-platinum-400">
-                  New York • London • Singapore • Lagos
+                  Lagos • London • Singapore • New York
                 </span>
               </li>
             </ul>
