@@ -51,12 +51,15 @@ const Header = () => {
     >
       <div className="content-container">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center">
-              <span className="text-gold-400 font-bold text-xl">AA</span>
-            </div>
-            <div className="font-playfair font-bold text-xl md:text-2xl text-navy-900">
-              Adenola <span className="text-gold-500">Adegbesan</span>
+          <Link to="/" className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center">
+                <span className="text-gold-400 font-bold text-xl">AA</span>
+              </div>
+              <div className="font-playfair font-bold text-xl md:text-2xl text-navy-900">
+                Adenola <span className="text-gold-500">Adegbesan</span>
+                <h3 className="text-[15px] ">The AI Maverick</h3>
+              </div>
             </div>
           </Link>
 
