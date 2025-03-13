@@ -6,6 +6,7 @@ import BookSection from '../components/Booking';
 import BlogVideo from '../components/BlogVideo';
 import Testimonials from '../components/Testimonial';
 import Contact from '../components/Contact';
+import Credentials from './Credentials';
 
 export default function Home() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <Credentials />
         <BlogVideo />
         <BookSection />
         <Testimonials />
