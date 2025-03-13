@@ -6,7 +6,6 @@ import {
   LineChart,
   Network,
   Shield,
-  Users,
   Target,
   Zap,
   ArrowRight,
