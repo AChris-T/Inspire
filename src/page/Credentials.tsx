@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
 import {
-  Award,
   Briefcase,
   ChevronRight,
-  GraduationCap,
   Star,
   Users,
   Globe,
@@ -11,7 +9,7 @@ import {
   ShieldCheck,
   Target,
 } from 'lucide-react';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Credentials() {
