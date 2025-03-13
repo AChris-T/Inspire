@@ -50,6 +50,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formState),
       });
+      console.log(response);
 
       setIsSubmitted(true);
       setFormState({
@@ -62,7 +63,9 @@ const Contact = () => {
       alert('Thank you for your message! We will get back to you soon.');
     } catch (error) {
       console.error('Submission error:', error);
-      alert('Error submitting form. Please try emailing us directly at adenola@adegbesan.com');
+      alert(
+        'Error submitting form. Please try emailing us directly at adenola@adegbesan.com'
+      );
     } finally {
       setIsSubmitting(false);
     }
