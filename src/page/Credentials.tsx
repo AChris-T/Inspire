@@ -51,13 +51,13 @@ export default function Credentials() {
                   AI & Business Leadership
                 </h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li>✅ Diploma in Business Management – Oxford University</li>
-                  <li>✅ MBA – University of the People, USA</li>
+                  <li> Diploma in Business Management – Oxford University</li>
+                  <li> MBA – University of the People, USA</li>
                   <li>
-                    ✅ Creator of InspireEdge AI – AI-powered business strategy
+                     Creator of InspireEdge AI – AI-powered business strategy
                     tool
                   </li>
-                  <li>✅ AI Consultant for Fortune 500 Executives</li>
+                  <li> AI Consultant for Fortune 500 Executives</li>
                 </ul>
               </div>
 
@@ -68,10 +68,10 @@ export default function Credentials() {
                   Finance & Strategic Planning
                 </h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li>✅ Certified Financial Modelling & Valuation Analyst</li>
-                  <li>✅ Certified Business Intelligence & Data Analyst</li>
-                  <li>✅ Corporate & Business Strategy Expert</li>
-                  <li>✅ Lean Six Sigma Black Belt – Business Optimization</li>
+                  <li> Certified Financial Modelling & Valuation Analyst</li>
+                  <li> Certified Business Intelligence & Data Analyst</li>
+                  <li> Corporate & Business Strategy Expert</li>
+                  <li> Lean Six Sigma Black Belt – Business Optimization</li>
                 </ul>
               </div>
 
@@ -82,10 +82,10 @@ export default function Credentials() {
                   Corporate Governance & Risk
                 </h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li>✅ The Art of Effective Boards (2024)</li>
-                  <li>✅ Risk Management – IBMI, Germany</li>
-                  <li>✅ Fellow, Institute of Leadership & Development</li>
-                  <li>✅ Member, Harvard Business Review Advisory Council</li>
+                  <li> The Art of Effective Boards (2024)</li>
+                  <li> Risk Management – IBMI, Germany</li>
+                  <li> Fellow, Institute of Leadership & Development</li>
+                  <li> Member, Harvard Business Review Advisory Council</li>
                 </ul>
               </div>
 
@@ -96,10 +96,10 @@ export default function Credentials() {
                   Project Management & Operations
                 </h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li>✅ Agile Project Management – HP Foundation</li>
-                  <li>✅ Advanced Project Management – Regenesys SA</li>
-                  <li>✅ Open University UK – Project Management</li>
-                  <li>✅ Lean Six Sigma Black Belt</li>
+                  <li> Agile Project Management – HP Foundation</li>
+                  <li> Advanced Project Management – Regenesys SA</li>
+                  <li> Open University UK – Project Management</li>
+                  <li> Lean Six Sigma Black Belt</li>
                 </ul>
               </div>
 
@@ -110,11 +110,11 @@ export default function Credentials() {
                   Sustainability & Ethics
                 </h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li>✅ Digital Security & Human Rights – Amnesty Intl.</li>
-                  <li>✅ Right to Privacy in the Digital Age – South Africa</li>
-                  <li>✅ Human Trafficking Awareness – Stanford University</li>
+                  <li> Digital Security & Human Rights – Amnesty Intl.</li>
+                  <li> Right to Privacy in the Digital Age – South Africa</li>
+                  <li> Human Trafficking Awareness – Stanford University</li>
                   <li>
-                    ✅ Sustainability & Green Business – Warwickshire Network
+                     Sustainability & Green Business – Warwickshire Network
                   </li>
                 </ul>
               </div>

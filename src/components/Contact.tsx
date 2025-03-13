@@ -10,7 +10,68 @@ import {
   Phone,
   Mail,
   BrainCircuit,
+  X,
+  AlertCircle,
 } from 'lucide-react';
+
+// Modal component
+const FeedbackModal = ({ 
+  isOpen, 
+  onClose, 
+  status, 
+  message 
+}: { 
+  isOpen: boolean; 
+  onClose: () => void; 
+  status: 'success' | 'error'; 
+  message: string;
+}) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-navy-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full transform transition-all duration-300 ease-in-out">
+        <div className="absolute top-4 right-4">
+          <button
+            onClick={onClose}
+            className="text-navy-400 hover:text-navy-600 transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="flex items-center justify-center mb-4">
+            {status === 'success' ? (
+              <div className="w-16 h-16 bg-navy-50 rounded-full flex items-center justify-center">
+                <Check className="w-8 h-8 text-navy-900" />
+              </div>
+            ) : (
+              <div className="w-16 h-16 bg-gold-50 rounded-full flex items-center justify-center">
+                <AlertCircle className="w-8 h-8 text-gold-500" />
+              </div>
+            )}
+          </div>
+          <h3 className={`text-xl font-semibold text-center mb-2 ${
+            status === 'success' ? 'text-navy-900' : 'text-gold-500'
+          }`}>
+            {status === 'success' ? 'Success!' : 'Error'}
+          </h3>
+          <p className="text-gray-600 text-center">{message}</p>
+          <button
+            onClick={onClose}
+            className={`mt-6 w-full py-2 px-4 rounded-md text-white font-medium transition-colors ${
+              status === 'success' 
+                ? 'bg-navy-900 hover:bg-navy-800' 
+                : 'bg-gold-500 hover:bg-gold-600'
+            }`}
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -22,6 +83,11 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [modalState, setModalState] = useState({
+    isOpen: false,
+    status: 'success' as 'success' | 'error',
+    message: '',
+  });
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -60,12 +126,18 @@ const Contact = () => {
         message: '',
         interest: 'strategy',
       });
-      alert('Thank you for your message! We will get back to you soon.');
+      setModalState({
+        isOpen: true,
+        status: 'success',
+        message: 'Thank you for your message! We will get back to you soon.',
+      });
     } catch (error) {
       console.error('Submission error:', error);
-      alert(
-        'Error submitting form. Please try emailing us directly at adenola@adegbesan.com'
-      );
+      setModalState({
+        isOpen: true,
+        status: 'error',
+        message: 'Error submitting form. Please try emailing us directly at adenola@adegbesan.com',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -97,6 +169,12 @@ const Contact = () => {
 
   return (
     <section ref={sectionRef} className="section-padding bg-white" id="contact">
+      <FeedbackModal
+        isOpen={modalState.isOpen}
+        onClose={() => setModalState(prev => ({ ...prev, isOpen: false }))}
+        status={modalState.status}
+        message={modalState.message}
+      />
       <div className="content-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="w-20 h-20 bg-navy-50 rounded-full flex items-center justify-center mx-auto mb-6">
