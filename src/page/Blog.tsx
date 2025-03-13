@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-
 import { BookOpen, Search, Filter } from 'lucide-react';
 import { blogPosts } from '../data/BlogPost';
 import BlogHero from '../components/BlogHero';
 import BlogList from '../components/BlogList';
-import MediumPosts from '../components/BlogSample';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
