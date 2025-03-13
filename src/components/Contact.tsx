@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -43,13 +44,12 @@ const Contact = () => {
     try {
       const response = await fetch(googleSheetURL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formState),
       });
-
-      if (!response.ok) throw new Error('Network response was not ok');
 
       setIsSubmitted(true);
       setFormState({
@@ -59,10 +59,10 @@ const Contact = () => {
         message: '',
         interest: 'strategy',
       });
-      alert('Thank you for your message!');
+      alert('Thank you for your message! We will get back to you soon.');
     } catch (error) {
       console.error('Submission error:', error);
-      alert('Error submitting form. Please try again later.');
+      alert('Error submitting form. Please try emailing us directly at adenola@adegbesan.com');
     } finally {
       setIsSubmitting(false);
     }
