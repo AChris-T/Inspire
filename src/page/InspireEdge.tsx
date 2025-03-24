@@ -85,8 +85,8 @@ const InspireEdge = () => {
                 <span className="text-gold-500">AI-Powered Intelligence</span>
               </h1>
               <p className="text-xl text-platinum-300 max-w-3xl mx-auto mb-8">
-                Harness the power of advanced AI to drive strategic decisions and maintain
-                competitive advantage in an AI-first world
+                Harness the power of advanced AI to drive strategic decisions
+                and maintain competitive advantage in an AI-first world
               </p>
               <div className="flex justify-center gap-4">
                 <Link
@@ -114,15 +114,21 @@ const InspireEdge = () => {
               className="grid grid-cols-1 md:grid-cols-4 gap-8 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-gold-500 mb-2">85%+</div>
+                <div className="text-3xl font-bold text-gold-500 mb-2">
+                  85%+
+                </div>
                 <p className="text-platinum-300">Prediction Accuracy</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gold-500 mb-2">500+</div>
+                <div className="text-3xl font-bold text-gold-500 mb-2">
+                  500+
+                </div>
                 <p className="text-platinum-300">Enterprise Clients</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gold-500 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-gold-500 mb-2">
+                  24/7
+                </div>
                 <p className="text-platinum-300">Real-time Analysis</p>
               </div>
               <div className="text-center">
@@ -147,8 +153,9 @@ const InspireEdge = () => {
                   <span className="text-gold-500">.</span>
                 </h2>
                 <p className="text-lg text-gray-700">
-                  InspireEdge AI combines cutting-edge artificial intelligence with deep business
-                  expertise to deliver actionable insights that drive growth and innovation.
+                  InspireEdge AI combines cutting-edge artificial intelligence
+                  with deep business expertise to deliver actionable insights
+                  that drive growth and innovation.
                 </p>
               </div>
 
@@ -178,8 +185,9 @@ const InspireEdge = () => {
                       Predictive Market Intelligence
                     </h3>
                     <p className="text-gray-600">
-                      Stay ahead of market trends with AI-powered predictions that help
-                      you identify opportunities before your competitors.
+                      Stay ahead of market trends with AI-powered predictions
+                      that help you identify opportunities before your
+                      competitors.
                     </p>
                   </div>
                 </div>
@@ -224,8 +232,9 @@ const InspireEdge = () => {
                     <span className="text-gold-500">.</span>
                   </h3>
                   <p className="text-lg text-gray-700 mb-6">
-                    Our advanced AI processes vast amounts of market data to identify patterns
-                    and trends that human analysts might miss, providing you with:
+                    Our advanced AI processes vast amounts of market data to
+                    identify patterns and trends that human analysts might miss,
+                    providing you with:
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start">
@@ -234,7 +243,8 @@ const InspireEdge = () => {
                       </div>
                       <div className="ml-4">
                         <p className="text-gray-700">
-                          Real-time competitor analysis and strategic positioning insights
+                          Real-time competitor analysis and strategic
+                          positioning insights
                         </p>
                       </div>
                     </li>
@@ -244,7 +254,8 @@ const InspireEdge = () => {
                       </div>
                       <div className="ml-4">
                         <p className="text-gray-700">
-                          Industry disruption predictions with proven 85%+ accuracy
+                          Industry disruption predictions with proven 85%+
+                          accuracy
                         </p>
                       </div>
                     </li>
@@ -254,7 +265,8 @@ const InspireEdge = () => {
                       </div>
                       <div className="ml-4">
                         <p className="text-gray-700">
-                          AI-analyzed market gaps and strategic opportunity identification
+                          AI-analyzed market gaps and strategic opportunity
+                          identification
                         </p>
                       </div>
                     </li>
@@ -280,8 +292,8 @@ const InspireEdge = () => {
                     <span className="text-gold-500">.</span>
                   </h3>
                   <p className="text-lg text-gray-700 mb-6">
-                    Transform data into actionable intelligence that drives confident
-                    executive decision-making with:
+                    Transform data into actionable intelligence that drives
+                    confident executive decision-making with:
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start">
@@ -290,7 +302,8 @@ const InspireEdge = () => {
                       </div>
                       <div className="ml-4">
                         <p className="text-gray-700">
-                          Advanced AI-powered scenario planning and risk assessment
+                          Advanced AI-powered scenario planning and risk
+                          assessment
                         </p>
                       </div>
                     </li>
@@ -325,21 +338,24 @@ const InspireEdge = () => {
         <section className="py-20 bg-navy-900 text-white">
           <div className="content-container">
             <div className="max-w-4xl mx-auto text-center">
-              <span className="badge bg-navy-800 text-gold-400 mb-4">Get Started Today</span>
+              <span className="badge bg-navy-800 text-gold-400 mb-4">
+                Get Started Today
+              </span>
               <h2 className="section-heading text-white mb-6">
                 Ready to Transform Your Business?
                 <span className="text-gold-500">.</span>
               </h2>
               <p className="text-xl text-platinum-300 mb-8">
-                Join forward-thinking organizations already leveraging InspireEdge AI
-                to drive growth and innovation.
+                Join forward-thinking organizations already leveraging
+                InspireEdge AI to drive growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   to="/contact"
                   className="premium-button bg-gold-500 hover:bg-gold-600 text-navy-950"
                 >
-                  Request Early Access <ChevronRight size={20} className="ml-2" />
+                  Request Early Access{' '}
+                  <ChevronRight size={20} className="ml-2" />
                 </Link>
                 <Link
                   to="/contact"

@@ -44,9 +44,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full py-4 top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md'
-          : 'bg-white bg-opacity-90 backdrop-blur-sm'
+        isScrolled ? 'bg-white shadow-md' : 'bg-white bg-opacity-90 '
       }`}
     >
       <div className="content-container">
