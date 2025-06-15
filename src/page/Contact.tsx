@@ -1,6 +1,3 @@
-import React from 'react';
-import { Calendar } from 'lucide-react';
-
 const Contact = () => {
   return (
     <div className="min-h-screen mt-[100px] bg-white py-16 px-4 sm:px-6 lg:px-8">
@@ -20,7 +17,6 @@ const Contact = () => {
             src="https://calendly.com/prince-adenola-adegbesan/30min"
             width="100%"
             height="700"
-            frameBorder="0"
             title="Schedule a Consultation"
             className="rounded-lg shadow-lg"
           ></iframe>
