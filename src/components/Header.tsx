@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import bgl from '../assets/bgl.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,9 +52,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex flex-col items-center gap-2">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center">
+              <img src={bgl} alt="" className="w-16 h-16" />
+              {/*  <div className="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center">
                 <span className="text-gold-400 font-bold text-xl">AA</span>
-              </div>
+              </div> */}
               <div className="font-playfair font-bold text-xl md:text-2xl text-navy-900">
                 Adenola <span className="text-gold-500">Adegbesan</span>
                 <h3 className="text-[15px] ">The AI Maverick</h3>

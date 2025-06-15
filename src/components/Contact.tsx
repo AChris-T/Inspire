@@ -12,18 +12,20 @@ import {
   BrainCircuit,
   X,
   AlertCircle,
+  Clock,
+  ExternalLink,
 } from 'lucide-react';
 
 // Modal component
-const FeedbackModal = ({ 
-  isOpen, 
-  onClose, 
-  status, 
-  message 
-}: { 
-  isOpen: boolean; 
-  onClose: () => void; 
-  status: 'success' | 'error'; 
+const FeedbackModal = ({
+  isOpen,
+  onClose,
+  status,
+  message,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  status: 'success' | 'error';
   message: string;
 }) => {
   if (!isOpen) return null;
@@ -51,17 +53,19 @@ const FeedbackModal = ({
               </div>
             )}
           </div>
-          <h3 className={`text-xl font-semibold text-center mb-2 ${
-            status === 'success' ? 'text-navy-900' : 'text-gold-500'
-          }`}>
+          <h3
+            className={`text-xl font-semibold text-center mb-2 ${
+              status === 'success' ? 'text-navy-900' : 'text-gold-500'
+            }`}
+          >
             {status === 'success' ? 'Success!' : 'Error'}
           </h3>
           <p className="text-gray-600 text-center">{message}</p>
           <button
             onClick={onClose}
             className={`mt-6 w-full py-2 px-4 rounded-md text-white font-medium transition-colors ${
-              status === 'success' 
-                ? 'bg-navy-900 hover:bg-navy-800' 
+              status === 'success'
+                ? 'bg-navy-900 hover:bg-navy-800'
                 : 'bg-gold-500 hover:bg-gold-600'
             }`}
           >
@@ -91,6 +95,8 @@ const Contact = () => {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+
+  const CALENDLY_URL = 'https://calendly.com/prince-adenola-adegbesan/30min';
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -136,11 +142,17 @@ const Contact = () => {
       setModalState({
         isOpen: true,
         status: 'error',
-        message: 'Error submitting form. Please try emailing us directly at adenola@adegbesan.com',
+        message:
+          'Error submitting form. Please try emailing us directly at adenola@adegbesan.com',
       });
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleCalendlyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
   };
 
   useEffect(() => {
@@ -171,7 +183,7 @@ const Contact = () => {
     <section ref={sectionRef} className="section-padding bg-white" id="contact">
       <FeedbackModal
         isOpen={modalState.isOpen}
-        onClose={() => setModalState(prev => ({ ...prev, isOpen: false }))}
+        onClose={() => setModalState((prev) => ({ ...prev, isOpen: false }))}
         status={modalState.status}
         message={modalState.message}
       />
@@ -200,15 +212,15 @@ const Contact = () => {
               Schedule a Consultation
             </h3>
             <p className="text-gray-600 mb-4">
-              Book a free AI strategy assessment and discover your
+              Book a free 30-minute AI strategy assessment and discover your
               organization's AI potential.
             </p>
-            <a
-              href="#contact-form"
-              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+            <button
+              onClick={handleCalendlyClick}
+              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Book Now →
-            </a>
+              Book Now <ExternalLink className="ml-2 w-4 h-4" />
+            </button>
           </div>
 
           <div className="premium-card p-6 text-center hover:shadow-lg transition-all duration-300">
@@ -224,9 +236,9 @@ const Contact = () => {
             </p>
             <a
               href="#contact-form"
-              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Download →
+              Download <Download className="ml-2 w-4 h-4" />
             </a>
           </div>
 
@@ -243,9 +255,9 @@ const Contact = () => {
             </p>
             <a
               href="#contact-form"
-              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Inquire →
+              Inquire <Mic className="ml-2 w-4 h-4" />
             </a>
           </div>
         </div>
@@ -261,10 +273,10 @@ const Contact = () => {
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-gold-500 mr-3" />
                   <a
-                    href="tel:+4407432529090"
+                    href="tel:+2348112698170"
                     className="text-navy-900 hover:text-gold-500 transition-colors"
                   >
-                    +234 811 269 8170{' '}
+                    +234 811 269 8170
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -275,6 +287,15 @@ const Contact = () => {
                   >
                     adenola@adegbesan.com
                   </a>
+                </div>
+                <div className="flex items-center">
+                  <Calendar className="w-5 h-5 text-gold-500 mr-3" />
+                  <button
+                    onClick={handleCalendlyClick}
+                    className="text-navy-900 hover:text-gold-500 transition-colors"
+                  >
+                    Schedule a 30-min Consultation
+                  </button>
                 </div>
               </div>
             </div>

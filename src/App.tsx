@@ -9,6 +9,7 @@ import Consulting from './page/Consulting';
 import InspireEdge from './page/InspireEdge';
 import Book from './page/Book';
 import Blog from './page/Blog';
+import Contact from './page/Contact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/speaking" element={<Speaking />} />
         <Route path="/course" element={<Course />} />
