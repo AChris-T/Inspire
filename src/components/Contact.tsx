@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -12,8 +11,6 @@ import {
   BrainCircuit,
   X,
   AlertCircle,
-  Clock,
-  ExternalLink,
 } from 'lucide-react';
 
 // Modal component
@@ -96,8 +93,6 @@ const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const CALENDLY_URL = 'https://calendly.com/prince-adenola-adegbesan/30min';
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -148,11 +143,6 @@ const Contact = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const handleCalendlyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
   };
 
   useEffect(() => {
@@ -212,15 +202,15 @@ const Contact = () => {
               Schedule a Consultation
             </h3>
             <p className="text-gray-600 mb-4">
-              Book a free 30-minute AI strategy assessment and discover your
+              Book a free AI strategy assessment and discover your
               organization's AI potential.
             </p>
-            <button
-              onClick={handleCalendlyClick}
-              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+            <a
+              href="#contact-form"
+              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Book Now <ExternalLink className="ml-2 w-4 h-4" />
-            </button>
+              Book Now →
+            </a>
           </div>
 
           <div className="premium-card p-6 text-center hover:shadow-lg transition-all duration-300">
@@ -236,9 +226,9 @@ const Contact = () => {
             </p>
             <a
               href="#contact-form"
-              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Download <Download className="ml-2 w-4 h-4" />
+              Download →
             </a>
           </div>
 
@@ -255,9 +245,9 @@ const Contact = () => {
             </p>
             <a
               href="#contact-form"
-              className="inline-flex items-center font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
+              className="inline-block font-medium text-navy-900 hover:text-navy-700 transition-colors duration-300"
             >
-              Inquire <Mic className="ml-2 w-4 h-4" />
+              Inquire →
             </a>
           </div>
         </div>
@@ -273,10 +263,10 @@ const Contact = () => {
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-gold-500 mr-3" />
                   <a
-                    href="tel:+2348112698170"
+                    href="tel:+4407432529090"
                     className="text-navy-900 hover:text-gold-500 transition-colors"
                   >
-                    +234 811 269 8170
+                    +234 811 269 8170{' '}
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -287,15 +277,6 @@ const Contact = () => {
                   >
                     adenola@adegbesan.com
                   </a>
-                </div>
-                <div className="flex items-center">
-                  <Calendar className="w-5 h-5 text-gold-500 mr-3" />
-                  <button
-                    onClick={handleCalendlyClick}
-                    className="text-navy-900 hover:text-gold-500 transition-colors"
-                  >
-                    Schedule a 30-min Consultation
-                  </button>
                 </div>
               </div>
             </div>
